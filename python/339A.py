@@ -1,16 +1,16 @@
 '''
 https://codeforces.com/problemset/problem/339/A
 Accepted
-154ms
+124ms
 16kb
 2024-09-23 00:47:44
 '''
 
-equation = input().split("+")
-equation = [int(number) for number in equation]
-equation.sort()
+integers = input().split("+")
+integers = sorted(integers)
 output = ""
-for item in range(0,len(equation)):
-    output = output + str(equation[item]) + "+"
-output = output[:-1]
+for pos in range(0,len(integers)):
+	output += (integers[pos])
+	if (pos+1) != len(integers):
+		output += "+"
 print(output)
